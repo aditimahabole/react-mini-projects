@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-
-
 import "../App.css";
 import Box from "./Box";
 // https://dummyjson.com/users/search?q=John
@@ -59,22 +57,23 @@ const Multiuser = () => {
     setSelectedValuesSet(updatedSet);
     inputRef.current.focus();
   };
-  const  removeBoxOnBackspace = (e) =>{
-    if(e.key === 'Backspace' && e.target.value === "" && selectedValues.length>0)
-    {
-        const size = selectedValues.length
-        const lastValue = selectedValues[size-1];
-        handleRemoveSelectedValue(lastValue)
-        setSearchSuggestions([])
+  const removeBoxOnBackspace = (e) => {
+    if (
+      e.key === "Backspace" &&
+      e.target.value === "" &&
+      selectedValues.length > 0
+    ) {
+      const size = selectedValues.length;
+      const lastValue = selectedValues[size - 1];
+      handleRemoveSelectedValue(lastValue);
+      setSearchSuggestions([]);
     }
-
-  }
+  };
 
   return (
     <div className="user_search_container">
       <div className="user_search_input">
-        {/* Pills */}
-        {/* Input Field */}
+        {/* Box */}
         {selectedValues.map((user) => {
           return (
             <Box
@@ -85,7 +84,7 @@ const Multiuser = () => {
             />
           );
         })}
-
+        {/* Input */}
         <div>
           <input
             ref={inputRef}
