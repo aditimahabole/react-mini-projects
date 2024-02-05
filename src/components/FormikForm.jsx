@@ -2,11 +2,11 @@
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextField from "@mui/material/TextField";
-
+import Button from "@mui/material/Button";
 
 const Basic = () => (
   <div>
-    <h1>Any place in your app!</h1>
+    <h1>Formik Form !</h1>
     <Formik
       initialValues={{ email: "", password: "", subjects: [""] }}
       validate={(values) => {
@@ -44,6 +44,8 @@ const Basic = () => (
             fullWidth
           />
           <ErrorMessage name="email" component="div" />
+          <br></br>
+          <br></br>
           <Field
             type="password"
             name="password"
@@ -58,7 +60,7 @@ const Basic = () => (
 
           {/* Adding text input for the 'subjects' array */}
           <br></br>
-        
+
           <Field
             name="subjects"
             label="Subjects"
@@ -68,11 +70,13 @@ const Basic = () => (
             as={TextField}
             fullWidth
           />
+          <br></br>
+          <br></br>
           <ErrorMessage name="subjects" component="div" />
 
-          <button type="submit" disabled={isSubmitting}>
+          <Button type="submit" disabled={isSubmitting} variant="contained">
             Submit
-          </button>
+          </Button>
         </Form>
       )}
     </Formik>
