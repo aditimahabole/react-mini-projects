@@ -1,4 +1,5 @@
-# React + Vite
+This repo contains useful mini react projects one can use and learn!
+# Useful Mini Projects
 [Multi User Input Demo Link : https://react-mini-projects-i7kn1s8ry-aditimahabole.vercel.app/](https://react-mini-projects-osap7k4mu-aditimahabole.vercel.app)
 <hr>
 
